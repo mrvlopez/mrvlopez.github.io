@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <ul class="tabs">
+        <li data-tab-target="#about" class="active tab">About</li>
+        <li data-tab-target="#norms" class="tab">Norms</li>
+        <li data-tab-target="#expectations" class="tab">Expectations</li>
+        <li data-tab-target="#transitions" class="tab">Transitions</li>
+        <li data-tab-target="#tools" class="tab">Tech Tools</li>
+        <li data-tab-target="#comms" class="tab">Communication</li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="about" data-tab-content class="active">
+          <ul class="box">
+              <li><H3>Victor E Lopez</H3></li>
+              <li><p>Welcome, my name is Victor and I am an aspiring computer teacher and current student at Moreland University. I was born in San Juan, P.R. and currently reside in Germany. I have a bachelors in Web Design and will become certified K7-12.</p></li>
+          </ul>
+        </div>
+
+        <div id="norms" data-tab-content>
+            <ul class="box">
+                <li>I will treat others as I would like to be treated</li>
+                <li>My work will always be professional in content and presentation</li>
+                <li>I will share my ideas without putting down the ideas of others</li>
+                <li>I will always leave the classroom with a new skill in my arsenal</li>
+                <li>No task is too difficult for me to achieve</li>
+            </ul>
+          </div>
+
+        <div id="expectations" data-tab-content>
+          <ul class="box">
+              <li>Students will interact with mutual respect and demonstrate professionalism in their work</li>
+              <li>Assignments submitted will be of the highest standard in presentation, organization, clarity, and punctuality</li>
+              <li>Students will collaborate with meaningful discussions and debates</li>
+              <li>Gaining new skills will be a daily duty</li>
+              <li>Students will develop a winning mentality of not accepting failure</li>
+          </ul>
+        </div>
+
+        <div id="transitions" data-tab-content>
+          <ul class="box">
+              <li>Switching to Computer Lab: Teacher says “Exit Routine” and students secure their materials. Teacher says “Proceed” and the first row of students get up and walk out. When the last student in the row reaches the door, the next row of students follows in sequence. The teacher will follow behind and watch as students take seats in the computer lab one row at a time. </li>
+              <li>Computer Logoff: When the teacher says “Sign Out, Execute” students will save their work, close all open apps, log off the computer and collect all their belongings.</li>
+              <li>Active Shooter Drill: Upon hearing the alarm the teacher yells “Shooter Drill” and two pre-selected students secure the classroom doors from the inside. The row of students closest to the windows will close them. All students will line up standing in rows close together away from the doors.</li>
+          </ul>
+        </div>
+
+        <div id="tools" data-tab-content>
+          <ul class="box">
+            <li>Trello - Share boards with your team, stay organized with todo lists and sync documents to Google Drive.</li>
+            <li>Class Dojo - Connect with families and students with photos and videos of the school day, translated messaging, student portfolios.</li>
+            <li>Google Classroom - Make and distribute assignments, provide automatic feedback, sync with Google Calendar and Drive.</li>
+            <li>Github - Create assignments with automated grading, distribute homework with startup files included, leave feedback line-by-line.</li>
+            <li>Smart Seat - Create seating charts with desks on a grid, record attendance, make student notes, store student photos.</li>
+          </ul>
+        </div>
+
+        <div id="comms" data-tab-content>
+          <ul class="box">
+              <li>I will make heavy use of WhatsApp groups for quick updates and use Tik Tok for short video updates.</li>
+              <li>I will set up my personal website on WordPress where I can receive direct messages from parents and share my learning plans.</li>
+              <li>I will use Zoom to try to resolve more serious issues before doing a face to face meeting with a parent.</li>
+          </ul>
+        </div>
+      </div>
+      
+      
+<script>
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget)
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('active')
+    })
+    tabs.forEach(tab => {
+      tab.classList.remove('active')
+    })
+    tab.classList.add('active')
+    target.classList.add('active')
+  })
+})
+ </script>     
+</body>
+</html>
