@@ -80,7 +80,12 @@ body {
   }
   
   
-  
+  a.btn {
+    color: #fff;
+    background: rgb(223, 15, 15);
+    padding: 15px;
+    border-radius: 10px;
+  }
   
   
   
